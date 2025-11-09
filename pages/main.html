@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Momo+Signature&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ciao Ilinca!</title>
+</head>
+
+<body>
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="../images/background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1 id="ciao" class="momo">Ciao</h1>
+        <h2 class="momo">Ilinca, my love.</h2>
+
+        <p class="delius">Facem 3 luni deja<br>Wow<br>Doresti sa-ti vezi cadoul?</p>
+
+        <div class="buttons">
+            <button id="logic">Logic</button>
+            <button id="nu">Nu</button>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    // Fade-in on load
+    window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+    });
+
+    // Fade-out before going to another page
+    function smoothRedirect(url) {
+        document.body.classList.remove("loaded");
+        setTimeout(() => {
+            window.location.href = url;
+        }, 800); // same duration as CSS transition
+    }
+
+    // Buttons
+    document.getElementById("logic").addEventListener("click", () => {
+        smoothRedirect("gift.html");
+    });
+
+    document.getElementById("nu").addEventListener("click", () => {
+        smoothRedirect("nu.html");
+    });
+
+
+</script>
+
+
+</html>

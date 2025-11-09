@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Momo+Signature&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ciao!</title>
+
+</head>
+
+<style>
+    /* --- Make gift page responsive --- */
+    @media (max-width: 1024px) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .div-lock {
+            width: 250px;
+            min-height: auto;
+            padding: 12px;
+        }
+
+        .div-lock h3 {
+            font-size: 1.2rem;
+        }
+
+        .div-lock h6 {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1.momo {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .div-lock {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .div-lock h3 {
+            font-size: 1rem;
+        }
+
+        .div-lock h6 {
+            font-size: 0.8rem;
+        }
+
+        .buttons {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .div-lock {
+            width: 200px;
+            padding: 8px;
+        }
+
+        .div-lock h3 {
+            font-size: 0.9rem;
+        }
+
+        .div-lock h6 {
+            font-size: 0.75rem;
+        }
+
+        .buttons button {
+            width: 120px;
+            height: 40px;
+            font-size: 11px;
+        }
+    }
+</style>
+
+<body class="body-lock">
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="../images/background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <h1 class="momo">Promisiunile Noastre</h1>
+    <div class="content" style="display: flex; justify-content: space-evenly; width: 100%; flex-wrap: wrap;">
+        <div style="display: flex; justify-content: space-evenly; width: 100%; flex-wrap: wrap;">
+            <div class="div-lock">
+                <div class="p-div">
+                    <h3>Moldova / Italy -> France 2029. 📍</h3>
+                    <hr>
+                    <h6 class="p-lock"><br><br>In 4 ani (dupa ce absolvi Liceul) osa ne <br> mutam amindoi in Franta
+                    </h6>
+                </div>
+            </div>
+            <div class="div-lock">
+                <h3>Yatch "Lilly" pana la 25 de ani. 🛥️</h3>
+                <hr>
+                <div class="p-div">
+                    <h6 class="p-lock"> - Culoarea Baby Pink.<br><br> - Piscina cu zona Party si Bar.<br><br> - Camera
+                        Noastra
+                        ->
+                        dulap
+                        si
+                        oglinda intro parte, <br>intrare printrun colidor, <br>iesire directa la jacuzzi-ul nostru (cu
+                        led-uri).
+                    </h6>
+                </div>
+            </div>
+            <div class="div-lock">
+                <div class="p-div">
+                    <h3>Porsche 911 GTR.🏎️ </h3>
+                    <hr>
+                    <h6 class="p-lock"><br><br><br><br>- Culoarea Roz<br>- Cadou de ziua ta (logic)</h6>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-evenly; width: 100%; flex-wrap: wrap; margin-top: 40px;">
+            <div class="div-lock">
+                <div class="p-div">
+                    <h3>Promise Ring / Darry Ring. 💍 </h3>
+                    <hr>
+                    <h6 class="p-lock"><br><br><br>Pana la 21 de ani ai tai loml.</h6>
+                </div>
+            </div>
+            <div class=" div-lock">
+                <div class="p-div">
+                    <h3>Exploram Lumea. 🌍</h3>
+                    <hr>
+                    <h6 class="p-lock"><br>Osa exploram tot globul impreuna. <br><br>Osa avem case in: <br>- Franta
+                        <br>- Torino<br>- London<br>- Cabana, in munti<br>- Mare, la plaja
+                    </h6>
+                </div>
+            </div>
+            <div class="div-lock">
+                <div class="p-div">
+                    <h3>HoneyMoon. 👰🏼🛌🌙</h3>
+                    <hr>
+                    <h6 class="p-lock"><br><br><br>HoneyMoon-ul nostru osa dureze o luna (ibati), si osal petrecem in
+                        Bahamas.</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="buttons">
+        <button id="inapoi">Inapoi</button>
+    </div>
+
+    <script>
+        document.getElementById("inapoi").addEventListener("click", () => {
+            smoothRedirect("gift.html");
+        });
+
+        // Fade-in on load
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+
+        function smoothRedirect(url) {
+            document.body.classList.remove("loaded");
+            setTimeout(() => {
+                window.location.href = url;
+            }, 800); // same duration as CSS transition
+        }
+    </script>
+
+
+</body>
+
+</html>

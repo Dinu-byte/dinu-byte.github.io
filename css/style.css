@@ -1,0 +1,401 @@
+/* ========== FONT CLASSES ========== */
+.momo {
+    font-family: "Momo Signature", cursive;
+    font-weight: 400;
+    color: #773344;
+}
+
+.delius {
+    font-family: "Delius", cursive;
+    font-weight: 500;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+    margin: 0;
+    background-color: #f5e9e2;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* ========== VIDEO BACKGROUND ========== */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.7);
+    /* slightly dim video to make content pop */
+}
+
+
+/* ========== CONTENT STYLES ========== */
+.content {
+    text-align: center;
+    color: #0b0014;
+    padding: 0 1.5rem;
+}
+
+#ciao {
+    color: #0b0014;
+    font-size: 5rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 4rem;
+    margin: 0;
+    color: #773344;
+}
+
+.content p {
+    margin-top: 50px;
+    font-size: 1.3rem;
+    color: #0b0014;
+}
+
+/* ========== BUTTONS ========== */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 40px 0 20px 20px;
+}
+
+button {
+    width: 220px;
+    height: 60px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 4px solid #773344;
+    background-color: #d6d2d2;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    font-family: "Delius", cursive;
+    font-weight: 600;
+}
+
+button:hover {
+    letter-spacing: 3px;
+    background-color: #773344;
+    color: #fff;
+    box-shadow: #773344 0px 7px 29px 0px;
+}
+
+button:active {
+    transform: translateY(8px);
+    transition: 100ms;
+}
+
+#inapoi {
+    margin-bottom: 20px;
+}
+
+/* ========== GIFT HTML ========== */
+.body-gift {
+    align-items: start;
+}
+
+.body-gift h1 {
+    font-size: 3rem;
+}
+
+.gift-button {
+    width: 320px;
+    height: 270px;
+    border-width: 8px;
+    margin: 10px 20px;
+}
+
+/* ========== BOUQUET HTML ========== */
+.content-bouquet {
+    border-radius: 50px;
+    border: 8px solid #773344;
+    background-color: #d6d2d2;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-family: "Delius", cursive;
+    font-weight: 600;
+}
+
+
+/* Center everything in the page */
+.body-gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Bouquet container */
+.bouquet {
+    position: relative;
+    width: 700px;
+    /* initial size */
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Images stacked on top of each other */
+.bouquet img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    /* smooth transition for opacity & transform */
+}
+
+.top {
+    cursor: pointer;
+    width: 100px;
+    height: auto;
+    z-index: 2;
+}
+
+.bottom {
+    z-index: 1;
+}
+
+/* Grow effect for bottom image */
+.bottom.grow {
+    transition: all 1.5s ease;
+    transform: scale(1.2);
+    /* grow 50% */
+}
+
+.small {
+    transform: scale(0.3);
+    transition: none;
+    /* grow 50% */
+}
+
+.small2 {
+    transform: scale(0.6);
+    transition: none;
+    /* grow 50% */
+}
+
+/* ========== LOCK HTML ========== */
+.body-lock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* let content start at top */
+    min-height: 100vh;
+    /* allow more height */
+    overflow-y: auto;
+    /* enable vertical scrolling */
+    overflow-x: hidden;
+    /* keep horizontal hidden */
+    padding: 20px 0;
+    /* optional: spacing top/bottom */
+    text-align: center;
+}
+
+.div-lock {
+    border-radius: 50px;
+    border: 6px solid #773344;
+    background-color: #d6d2d2;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-family: "Delius", cursive;
+    font-weight: 600;
+    padding: 20px;
+    height: 280px;
+    width: 300px;
+
+}
+
+.div-lock {
+    font-family: "Delius", cursive;
+    font-weight: 300;
+    font-size: 200;
+    color: #773344;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #0b0014;
+    margin-top: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+hr {
+    height: 3px;
+    background-color: #773344;
+    border: none;
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+    #ciao {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 160px;
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .photo {
+        width: 120px;
+        height: 140px;
+        border-width: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #ciao {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 0.95rem;
+    }
+
+    .buttons {
+        gap: 1rem;
+    }
+
+    button {
+        width: 140px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .photo {
+        width: 100px;
+        height: 120px;
+        border-width: 8px;
+    }
+}
+
+/* ========== MOBILE IMPROVEMENTS FOR GIFT PAGE ========== */
+@media (max-width: 1024px) {
+    .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 20px auto;
+    }
+
+    .gift-button {
+        width: 180px;
+        height: 180px;
+        margin: 10px;
+    }
+
+    .gift-button img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .content {
+        padding: 0 1rem;
+    }
+
+    .content h1.momo {
+        font-size: 2.5rem;
+    }
+
+    .content p.delius {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gift-button {
+        width: 140px;
+        height: 140px;
+        margin: 8px;
+    }
+
+    .content h1.momo {
+        font-size: 2rem;
+    }
+
+    .content p.delius {
+        font-size: 0.95rem;
+    }
+
+    .buttons {
+        gap: 0.8rem;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-button {
+        width: 120px;
+        height: 120px;
+        margin: 6px;
+        border-width: 6px;
+    }
+
+    img {
+        transform: scale(0.6);
+    }
+
+    .buttons {
+        gap: 0.6rem;
+        margin: 10px auto;
+    }
+
+    .buttons button img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Optional: make Inapoi button smaller on mobile */
+@media (max-width: 768px) {
+    #inapoi {
+        width: 140px;
+        height: 45px;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+}

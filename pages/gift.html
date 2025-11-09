@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Momo+Signature&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ciao Ilinca!</title>
+</head>
+
+<body class="body-gift">
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="../images/background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content" style="margin-top: 20px;">
+        <h1 class="momo">Acestea sunt pentru tine!</h1>
+
+        <p class="delius">Sper sa-ti placa.</p>
+
+        <div class="buttons">
+            <button id="foto" class="gift-button"><img src="../images/icons/foto.png" alt="foto" width="150px"
+                    height="150px"></button>
+            <button id="bouquet" class="gift-button"><img src="../images/icons/bouquet.png" alt="foto" width="200px"
+                    height="200px"></button>
+        </div>
+        <div class="buttons">
+            <button id="lock" class="gift-button"><img src="../images/icons/locket.png" alt="foto" width="270px"
+                    height="200px"></button>
+            <button id="letter" class="gift-button"><img src="../images/icons/letter.png" alt="foto" width="170px"
+                    height="170px"></button>
+        </div>
+    </div>
+
+
+
+    <div class="buttons">
+        <button id="inapoi">Inapoi</button>
+    </div>
+</body>
+
+<script>
+    window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+    });
+
+    document.getElementById("inapoi").addEventListener("click", () => {
+        smoothRedirect("main.html");
+    });
+
+    document.getElementById("foto").addEventListener("click", () => {
+        smoothRedirect("foto.html");
+    });
+
+    document.getElementById("bouquet").addEventListener("click", () => {
+        smoothRedirect("bouquet.html");
+    });
+
+    document.getElementById("lock").addEventListener("click", () => {
+        smoothRedirect("lock.html");
+    });
+
+    document.getElementById("letter").addEventListener("click", () => {
+        smoothRedirect("letter.html");
+    });
+
+    function smoothRedirect(url) {
+        document.body.classList.remove("loaded");
+        setTimeout(() => {
+            window.location.href = url;
+        }, 800); // same duration as CSS transition
+    }
+</script>
+
+</html>
