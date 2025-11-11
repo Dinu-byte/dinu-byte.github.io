@@ -261,6 +261,17 @@ hr {
     border: none;
 }
 
+#porsche {
+    width: 250px;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    .div-lock {
+        justify-content: center;
+    }
+}
+
 /* ========== MOBILE RESPONSIVENESS ========== */
 @media (max-width: 768px) {
     #ciao {
